@@ -78,7 +78,7 @@ body { min-height: 100%; overflow: hidden; }
 .lightbox-link {background: #fff; 
       border: none;  
       border-left: 1px solid black;
-      z-index: 3000;
+      z-index: 6000;
   
 }
 
@@ -92,34 +92,54 @@ body { min-height: 100%; overflow: hidden; }
 }
 
 //background of lightbox
+
 #lightBoxDiv { 
-      position: fixed; 
+      
+      position: fixed !important; 
       top: 0; 
       left: 0; 
-      width: 100%; 
-      height: 100%; 
-      background-color: rgba(0,0,0,.2);
-      background-image: -webkit-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.3) .5px, transparent .5px, transparent 100%);
+      min-width: 100%; 
+      min-height: 100%; 
       
-      //background-image: -moz-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.9) 1px, transparent 1px, transparent 100%);
-      //background-image: -ms-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.9) 1px, transparent 1px, transparent 100%);
-      //background-image: repeating-radial-gradient(center center, rgba(255,255,255,.6), rgba(255,255,255,.6) .125px, transparent .125px, transparent 100%);
+
+      
+       background-image: -webkit-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.3) .5px, transparent .5px, transparent 100%);
+      
+      background-image: -moz-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.9) 1px, transparent 1px, transparent 100%);
+      background-image: -ms-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.9) 1px, transparent 1px, transparent 100%);
+      background-image: repeating-radial-gradient(center center, rgba(255,255,255,.6), rgba(255,255,255,.6) .125px, transparent .125px, transparent 100%); 
+      background-color: rgba(0,0,0, 0.8) !important;
       text-align: center; 
       display: none; 
-      z-index: 2500;
+      z-index: 500;
       -webkit-background-size: 2px 2px;
       -moz-background-size: 3px 3px;
       background-size: 3px 3px;
+      position: fixed !important; 
 }
+
+#lightBoxDiv {  
+  position: fixed !important;
+  top: 0; 
+  left: 0; 
+  min-width: 100%; 
+  min-height: 100%; 
+  background-color: rgba(0,0,0,.8); 
+  text-align: center; 
+  display: none; 
+  z-index: 500;
+  }
+
 
 
 
 #lightBoxContent { 
     background: #fff;
+    float:center;
     //opacity: .1;
-    height: 100%; 
-    width: 100%; 
-    border: 2px solid #fff; 
+    height: 80%; 
+    width: 70%; 
+    //border: 2px solid #fff; 
     position: fixed; 
     overflow: scroll;
     margin: -18% 0 0 0; 
@@ -241,6 +261,7 @@ header {
     );
     //padding-bottom: 30px;
     display: block;
+    
     min-width: 100%;
     z-index: 3000;
     margin: 55px 0;  
@@ -265,19 +286,13 @@ header {
 
 /* index  */
 
-.blank{
-  text-align:center;
-  padding: 0px 30px;
-  
-}
-
 
 .image-box{
     margin: 0 25%;
     position: fixed;
     width: 500px;
     height: 500px;
-    //z-index: 2200;
+    z-index: 2200;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -295,9 +310,28 @@ img {
 }
 
 .im-mir{
-  background-image: url("content/mir/img/1_MIRETT_COVER.jpg");
+  background-image: url("content/mir/img/MIRETT_COVER.jpg");
 }
 
+.im-sh1{
+  background-image: url("content/sher/sh-1/img/COVER_SHERWOOD.jpg");
+}
+
+.im-sh2{
+  background-image: url("content/sher/sh-1/img/COVER_SHERWOOD.jpg");
+}
+
+.im-fwd{
+  background-image: url("content/fwd/img/MIRETT_COVER.jpg");
+}
+
+.im-alt{
+  background-image: url("content/alt/img/MIRETT_COVER.jpg");
+}
+
+.im-oc{
+  background-image: url("content/ocb/img/MIRETT_COVER.jpg");
+}
 
 
 
@@ -312,12 +346,12 @@ img {
 //STICKY KIT CSS
 
 .blank-loose{
-    text-align:center;
+    display: block;
     position: relative;
     bottom: 0;
   	right: 0;
   	left: 0;
-  	margin: 0px 0px 0px 720px;
+  	//margin: 0px 0px 0px 720px;
   	
 }
 
@@ -325,33 +359,41 @@ img {
      
     height: 500px;
     padding-bottom: 0px;
-    z-index: 2250 !important;
+    position: relative !important;
     margin: 0px 0;
+    //vertical-align: none !important;
     overflow: hidden;
-    min-width: 50%;
-    
+    min-width: 90%;
+    //border: 2px solid red;
      }
 
      .index-title{
   font-size: 300%;
   text-align: right;
+  width: auto;
+  white-space: nowrap;
+  //overflow: hidden;
   z-index: 2250 !important;
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
-  margin: 0px 20px !important;
-   //width: auto;
+  margin: 0px 0px !important;
+  //border: 2px solid blue;
+}
 
-  
+.blank{
+  text-align:center;
+  width: auto;
+  height: 0;
+  //border: 2px solid green;
 }
 
 div[style]{
-  margin: 0px 10px !important;
-  
+  display: block;  
+  bottom: 0px;
 }
 
   .title {
-    min-width: 100%;
-    float: right;
+    //border: 2px solid white;
 }
 
 
@@ -360,7 +402,7 @@ div[style]{
 .title-loose{
 	position: relative;
   margin: 0px 20px !important;
-  z-index: 2250;
+
 
 }
 

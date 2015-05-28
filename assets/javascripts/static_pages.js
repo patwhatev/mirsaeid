@@ -54,14 +54,16 @@
         //FOR INDEX TITLES
 
         $stickThis.stick_in_parent({
-             offset_top: 290
+             offset_top: 290 ,recalc_every: 600
          })
          .on("sticky_kit:stick", function(e) {
-             $(".title").removeClass("title-loose");
+             $(".title").removeClass("blank-loose");
+
          })
          .on("sticky_kit:unstick", function(e) {
              removeTop();
-             $(".title").addClass("title-loose");
+             $(".title").addClass("blank-loose");
+            
          });
          
          
@@ -71,34 +73,34 @@
             var scroll = $(window).scrollTop();
             
             if (scroll < 500){
-                $(".image-box").removeClass("im-sum");
+                $(".image-box").removeClass("im-sum")
             }
-            else if (scroll >= 500) {
-                $(".image-box").addClass("im-sum");
+            if (scroll >= 500) {
+                $(".image-box").addClass("im-sum")
             } 
-            else if (scroll >= 1000) {
-                $(".image-box").removeClass("im-sum");
-                $(".image-box").addClass("im-mir");
+            if (scroll >= 1000) {
+                $(".image-box").removeClass("im-sum")
+                $(".image-box").addClass("im-mir")
             } 
-            else if (scroll >= 500) {
-                $(".image-box").addClass("im-sh1");
-                $(".image-box").removeClass("im-mir");
+            if (scroll >= 1500) {
+                $(".image-box").addClass("im-sh1")
+                $(".image-box").removeClass("im-mir")
             } 
-            else if (scroll >= 500) {
-                $(".image-box").addClass("im-sh2");
-                $(".image-box").removeClass("im-sh1");
+            if (scroll >= 2000) {
+                $(".image-box").addClass("im-sh2")
+                $(".image-box").removeClass("im-sh1")
             } 
-            else if (scroll >= 500) {
-                $(".image-box").addClass("im-fwd");
-                $(".image-box").removeClass("im-sh2");
+            if (scroll >= 2500) {
+                $(".image-box").addClass("im-fwd")
+                $(".image-box").removeClass("im-sh2")
             } 
-            else if (scroll >= 500) {
-                $(".image-box").addClass("im-alt");
-                $(".image-box").removeClass("im-fwd");
+            if (scroll >= 3000) {
+                $(".image-box").addClass("im-alt")
+                $(".image-box").removeClass("im-fwd")
             } 
-            else if (scroll >= 500) {
-                $(".image-box").addClass("im-oc");
-                $(".image-box").removeClass("im-alt");
+             if (scroll >= 3500) {
+                $(".image-box").addClass("im-oc")
+                $(".image-box").removeClass("im-alt")
             } 
         });
         
