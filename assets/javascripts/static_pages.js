@@ -68,40 +68,44 @@
          
          
          //scrolltop change image on HOMEPAGE
+
+       
          
          $(window).scroll(function() {    
             var scroll = $(window).scrollTop();
             
-            if (scroll < 500){
-                $(".image-box").removeClass("im-sum")
-            }
-            if (scroll >= 500) {
-                $(".image-box").addClass("im-sum")
-            } 
-            if (scroll >= 1000) {
-                $(".image-box").removeClass("im-sum")
-                $(".image-box").addClass("im-mir")
-            } 
-            if (scroll >= 1500) {
-                $(".image-box").addClass("im-sh1")
-                $(".image-box").removeClass("im-mir")
-            } 
-            if (scroll >= 2000) {
-                $(".image-box").addClass("im-sh2")
-                $(".image-box").removeClass("im-sh1")
-            } 
-            if (scroll >= 2500) {
-                $(".image-box").addClass("im-fwd")
-                $(".image-box").removeClass("im-sh2")
-            } 
-            if (scroll >= 3000) {
-                $(".image-box").addClass("im-alt")
-                $(".image-box").removeClass("im-fwd")
-            } 
-             if (scroll >= 3500) {
-                $(".image-box").addClass("im-oc")
-                $(".image-box").removeClass("im-alt")
-            } 
+                if (scroll < 500){
+                    $("#image-box").removeClass()
+                }
+                if (scroll >= 500) {
+                    $("#image-box").removeClass()
+                    $("#image-box").addClass("im-sum")
+                } 
+                if (scroll >= 1000) {
+                    $("#image-box").removeClass()
+                    $("#image-box").addClass("im-mir")
+                } 
+                if (scroll >= 1500) {
+                    $("#image-box").removeClass()
+                    $("#image-box").addClass("im-sh1")
+                } 
+                if (scroll >= 2000) {
+                    $("#image-box").removeClass()
+                    $("#image-box").addClass("im-sh2")
+                } 
+                if (scroll >= 2500) {
+                    $("#image-box").removeClass()
+                    $("#image-box").addClass("im-fwd")
+                } 
+                if (scroll >= 3000) {
+                    $("#image-box").removeClass()
+                    $("#image-box").addClass("im-alt")
+                } 
+                 if (scroll >= 3500) {
+                    $("#image-box").removeClass()
+                    $("#image-box").addClass("im-oc")
+                } 
+           
         });
         
 
