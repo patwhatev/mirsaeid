@@ -125,11 +125,11 @@ body { min-height: 100%; overflow: hidden; }
 
 
 #lightBoxContent { 
-    background: #fff;
-    float:center;
+    background: rgba(0,0,0,0);
+    //float:right;
     //opacity: .1;
-    height: 80%; 
-    width: 70%; 
+    height: 100%; 
+    width: 100%; 
     //border: 2px solid #fff; 
     position: fixed; 
     overflow: scroll;
@@ -142,23 +142,35 @@ body { min-height: 100%; overflow: hidden; }
   height: 550px;
 }
 
-.lightbox-footer{
-  height: 100%;
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  z-index: 2526;
+
+.ft-content{
+  margin-left: auto;
+  display: block;
+    margin-right: auto;
+    width: 99%;
 }
 
 .footer-test {
 font-family: 
   color: #fff;
+  margin: 0 0;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 24px;
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 26.3999996185303px;
+  //line-height: 26.3999996185303px;
+}
+
+.lightbox-footer{
+  height: auto;
+  float: right;
+  width: 100%;
+  margin: 0 0;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
+  z-index: 2526;
 }
 
 
@@ -179,18 +191,17 @@ position: fixed;
 
 
 #lightBoxClose { 
-    display: block; 
+    //display: inline-block; 
     text-align: center; 
+    margin: 0 0;
     float: left; 
-    //cursor: pointer; 
-    background: #fff; 
-    padding: 8px 12px; 
-    border-radius: 30px; 
+    width: 20px;
+    //cursor: pointer;  
+    //padding: 8px 12px;  
     font-family: arial;  
-    position: relative; 
-    top: -27px; 
+    bacckground-color: #000; 
     left: 20px; 
-    z-index: 550; 
+    //z-index: 550; 
     font-weight: 700; }
 
 /* lightbox CSS end */
@@ -544,7 +555,7 @@ footer small {
      min-width: 99%;
     height: 500px;
     padding-bottom: 50px;
-    border: 15px solid blue;
+    
     margin: 200px 0px;
      }
 
@@ -564,7 +575,7 @@ footer small {
       letter-spacing: -1px;
       //margin-bottom: 10px;
       text-align: left;
-       border: 25px red;
+     
       font-weight: normal;
       color: #777;
     }
@@ -583,7 +594,7 @@ footer small {
 .index-title{
   font-size: 6.4vw;
   text-align: right;
-   border: 5px solid red;
+   
    width: 90%;
    float: right;
 }
@@ -601,7 +612,7 @@ footer small {
      max-width: 100%;
     height: 500px;
     padding-bottom: 50px;
-    border: 15px solid blue;
+    
     margin: 200px 0px;
      }
 
@@ -621,7 +632,7 @@ footer small {
       letter-spacing: -1px;
       //margin-bottom: 10px;
       text-align: left;
-       border: 25px red;
+  
       font-weight: normal;
       color: #777;
     }
