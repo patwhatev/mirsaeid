@@ -135,7 +135,7 @@ body { min-height: 100%; overflow: hidden; }
     overflow: scroll;
     margin: -18% 0 0 0; 
     display: none; 
-    z-index: 2525; 
+    z-index: 5525; 
 }
 
 .box-spacer{
@@ -177,6 +177,11 @@ font-family:
 #lightBoxText {
   color: black;
   text-align: center;
+}
+
+.body-fixed{
+  overflow: hidden;
+  position: fixed;
 }
 
 /*
@@ -228,7 +233,7 @@ body {
 }
 
 .site-title{
-  margin: -5px 5px;
+  margin: 5px 10px;
 }
 
 #logo {

@@ -47,6 +47,7 @@
             $(img).attr('src', src);
         }
         
+
          //lightbox
         function setKeys() {
             $document.keyup(function(e) {
@@ -65,6 +66,7 @@
              $lightBox.fadeIn(function() {
                  $lightBoxContent.show();
                  render(projects[curentProject]);
+                    $('body').addClass("body-fixed")
         
              });
              /* positionLightBox1(); */
@@ -72,6 +74,7 @@
         
          $lightBoxClose.click(function() {
              closeLightBox();
+             $('body').removeClass("body-fixed")
          });
          
         //loading animation
@@ -110,36 +113,37 @@
          
          $(window).scroll(function() {    
             var scroll = $(window).scrollTop();
+        
             
-                if (scroll < 500){
+                if (scroll < 250){
                     $("#image-box").removeClass()
                 }
-                if (scroll >= 500) {
+                if (scroll >= 250) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-sum")
                     curentProject = 'sumzine';
                 } 
-                if (scroll >= 1000) {
+                if (scroll >= 750) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-mir")
                 } 
-                if (scroll >= 1500) {
+                if (scroll >= 1250) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-sh1")
                 } 
-                if (scroll >= 2000) {
+                if (scroll >= 1750) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-sh2")
                 } 
-                if (scroll >= 2500) {
+                if (scroll >= 2250) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-fwd")
                 } 
-                if (scroll >= 3000) {
+                if (scroll >= 2750) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-alt")
                 } 
-                 if (scroll >= 3500) {
+                 if (scroll >= 3250) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-oc")
                 } 
