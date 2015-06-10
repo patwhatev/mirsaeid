@@ -145,9 +145,16 @@ body { min-height: 100%; overflow: hidden; }
 
 .ft-content{
   margin-left: auto;
+  color: white;
+  font-size: 22px;
   display: block;
     margin-right: auto;
     width: 99%;
+}
+
+.{
+  color: white;
+  font-size: 22px;
 }
 
 .footer-test {
@@ -302,8 +309,18 @@ header {
     z-index: 2200;
     background-repeat: no-repeat;
     background-position: center center;
+
+    -webkit-transition: width 1s ease;
+     -moz-transition: width 1s ease;
+       -o-transition: width 1s ease;
+      -ms-transition: width 1s ease;
+          transition: width 1s ease;
 }
 
+#image-box:hover{
+  width: 550px;
+  height: 550px;
+}
 
 //image classes
 
