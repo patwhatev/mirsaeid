@@ -27,7 +27,7 @@ body { min-height: 100%; overflow: hidden; }
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 2999;
+  z-index: 4999;
 }
 
 #pulsing-circle-container {
@@ -118,7 +118,7 @@ body { min-height: 100%; overflow: hidden; }
       position: fixed !important;  
   text-align: center; 
   display: none; 
-  z-index: 500;
+  z-index: 1500;
   }
 
 
@@ -306,20 +306,18 @@ header {
     position: fixed;
     width: 500px;
     height: 500px;
-    z-index: 2200;
+    z-index: 2000 !important;
     background-repeat: no-repeat;
     background-position: center center;
 
-    -webkit-transition: width 1s ease;
-     -moz-transition: width 1s ease;
-       -o-transition: width 1s ease;
-      -ms-transition: width 1s ease;
-          transition: width 1s ease;
+    transform: scale(1); /* 1/10 of the original size */
+    
 }
 
 #image-box:hover{
-  width: 550px;
-  height: 550px;
+  transform: scale(1.1); /* 1/10 of the original size */
+    transition: all 0.5s ease-in-out;
+    z-index: 1000 !important;
 }
 
 //image classes
@@ -354,7 +352,7 @@ img {
 }
 
 .im-oc{
-  background-image: url("content/ocb/img/MIRETT_COVER.jpg");
+  background-image: url("content/ocb/img/OCBLOG_3.jpg");
 }
 
 
@@ -380,44 +378,50 @@ img {
 }
 
  .index-box {
-     
+    //z-index: 2000 !important;
     height: 500px;
     padding-bottom: 0px;
     position: relative !important;
     margin: 0px 0;
     //vertical-align: none !important;
     overflow: hidden;
-    min-width: 90%;
-    //border: 2px solid red;
+    width: auto;
+   // border: 2px solid red;
      }
 
      .index-title{
   font-size: 300%;
   text-align: right;
-  width: auto;
+  max-width: auto;
   white-space: nowrap;
   //overflow: hidden;
-  z-index: 2250 !important;
+  z-index: 3000 !important;
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
   margin: 0px 0px !important;
-  //border: 2px solid blue;
+ // border: 2px solid blue;
 }
 
 .blank{
   text-align:center;
   width: auto;
   height: 0;
-  //border: 2px solid green;
+ // border: 2px solid green;
 }
 
 div[style]{
   display: block;  
   bottom: 0px;
+ pointer-events: none;
+}
+
+.pointer{
+  pointer-events: auto;
 }
 
   .title {
     //border: 2px solid white;
+    z-index: 3000 !important;
 }
 
 
@@ -426,7 +430,7 @@ div[style]{
 .title-loose{
 	position: relative;
   margin: 0px 20px !important;
-
+  z-index: 3000 !important;
 
 }
 
@@ -616,7 +620,7 @@ footer small {
 .index-title{
   font-size: 6.4vw;
   text-align: right;
-   
+   z-index: 2000 !important;
    width: 90%;
    float: right;
 }
@@ -673,7 +677,7 @@ footer small {
 .index-title{
   font-size: 22px;
   text-align: right;
-   border: 5px solid red;
+  // border: 5px solid red;
    width: 90%;
    float: right;
 }

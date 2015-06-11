@@ -24,7 +24,7 @@
                     "images": [ "assets/stylesheets/content/sher/sh-1/img/1_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/2_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/3_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/4_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/5_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/6_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/7_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/8_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/9_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/10_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/11_SHERWOOD.jpg"] 
             },
             "ocblog" : {
-                    "text": "Contribute to the Opening Ceremony Blog. Works include:</br></br></br></br>“So Trendy! Neon and Mirrors for Selfies,” Art Basel, Winter 2014 </br></br></br></br>“Walking the Line Between High & Low, Culture and Commerce.” Interview with Cyril Duval, Fall 2014</br></br></br></br>“Boy child at Art Basel Miami,” Winter 2013</br></br></br></br>Link: Openingceremony.us",
+                    "text": "Contribute to the Opening Ceremony Blog. Works include:</br></br></br></br>“So Trendy! Neon and Mirrors for Selfies,” Art Basel, Winter 2014 </br></br></br></br>“Walking the Line Between High & Low, Culture and Commerce.” Interview with Cyril Duval, Fall 2014“Boy child at Art Basel Miami,” Winter 2013</br></br>Link: Openingceremony.us",
                     "images": [ "assets/stylesheets/content/ocb/img/OCBLOG_1.jpg", "assets/stylesheets/content/ocb/img/OCBLOG_2.jpg", "assets/stylesheets/content/ocb/img/OCBLOG_3.jpg"] 
             }
         };
@@ -67,6 +67,8 @@
                  $lightBoxContent.show();
                  render(projects[curentProject]);
                     $('body').addClass("body-fixed")
+                    $("div").css("pointer-events", "auto");
+
         
              });
              /* positionLightBox1(); */
@@ -135,12 +137,13 @@
                 } 
                 if (scroll >= 1750) {
                     $("#image-box").removeClass()
-                    $("#image-box").addClass("im-sh2")
+                    $("#image-box").addClass("im-oc") //THIS IS TEMPORARY, SWAP WITH IM-SH2 WHEN READY
                 } 
                 if (scroll >= 2250) {
                     $("#image-box").removeClass()
-                    $("#image-box").addClass("im-fwd")
+                   // $("#image-box").addClass("im-fwd")
                 } 
+               //COMMENTED OUT TO AVOID BROKEN IMAGE IN FOOTER */
                 if (scroll >= 2750) {
                     $("#image-box").removeClass()
                     $("#image-box").addClass("im-alt")
