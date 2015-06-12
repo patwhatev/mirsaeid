@@ -2,9 +2,10 @@
 
 .load-text{
     color: white;
-    font-size: 6vw;
+    font-size: 5vw;
     padding-top: 50%;
-    margin: 0 450px;
+    margin: 0 500px;
+    margin-left: 600px;
 }
 
 body { min-height: 100%; overflow: hidden; }
@@ -57,7 +58,7 @@ body { min-height: 100%; overflow: hidden; }
  @keyframes scaleout {
   0% { 
     transform: scale(0.0);
-    -webkit-transform: scale(0.0);
+    -webkit-transform: scale(0.7);
   } 100% {
     transform: scale(0.1);
     -webkit-transform: scale(0.7);
@@ -309,7 +310,7 @@ header {
     z-index: 2000 !important;
     background-repeat: no-repeat;
     background-position: center center;
-
+    //border: 2px solid red;
     transform: scale(1); /* 1/10 of the original size */
     
 }
@@ -410,7 +411,7 @@ img {
 }
 
 div[style]{
-  display: block;  
+  display: block ;  
   bottom: 0px;
  pointer-events: none;
 }

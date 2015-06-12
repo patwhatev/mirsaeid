@@ -60,14 +60,16 @@
          function closeLightBox() {
              $lightBox.fadeOut();
              $lightBoxContent.hide();
+
          }
         
          $clickIt.click(function(e) {
+
              $lightBox.fadeIn(function() {
                  $lightBoxContent.show();
                  render(projects[curentProject]);
                     $('body').addClass("body-fixed")
-                    $("div").css("pointer-events", "auto");
+                    $('div').css("pointer-events", "auto");
 
         
              });
@@ -77,6 +79,9 @@
          $lightBoxClose.click(function() {
              closeLightBox();
              $('body').removeClass("body-fixed")
+             $('div').css("pointer-events", "auto");
+             $('#image-box').css("display", "block");
+
          });
          
         //loading animation
@@ -119,6 +124,7 @@
             
                 if (scroll < 250){
                     $("#image-box").removeClass()
+                    $('a').removeAttr('clickIt')
                 }
                 if (scroll >= 250) {
                     $("#image-box").removeClass()
