@@ -12,7 +12,7 @@
         var $stickThis = $('.stick-this');
         var projects = {
             "sumzine": {
-                "text": "SUMZINE </br>Sumzine is a biannual slow-fashion zine based out of NYC. We carry the torch of Dame Westwood, \"Buy less, choose well, make it last!\" </br></br> Not your typical sustainability-loving, fashion editorial magazine. We wanted to put aside that \"go green hippiness\" and bring in the cool, New York City downtown chic vibes. </br></br>The design of Sumzine is vibrant and bold, with a mixture of earthy feels. Since Sumzine's theme changes with every issue, we wanted to keep the branding and design simple, clean, constant and versatile. </br></br>Editor in Chief: Jamie Ortega </br></br></br>Design Direction: Nikki Mirsaeid </br></br></br>Collaborators: Features include interviews with Brian Procell, Osei-Duro, #jacques-Elliott, and XXBC. Essays by Rachel Hodin and Jamie Ortega. Photography from Adam Katz Sinding, Nekole Kemelle, Shanita Sims, Koa Pennock, Ruvan Wijesooriya, and James Parker. Illustrations by Jonah Leslie. </br></br>Link: sumzine.com",
+                "text": "SUMZINE </br>Sumzine is a biannual slow-fashion zine based out of NYC. We carry the torch of Dame Westwood, \"Buy less, choose well, make it last!\" </br></br> Not your typical sustainability-loving, fashion editorial magazine. We wanted to put aside that \"go green hippiness\" and bring in the cool, New York City downtown chic vibes. </br></br>The design of Sumzine is vibrant and bold, with a mixture of earthy feels. Since Sumzine's theme changes with every issue, we wanted to keep the branding and design simple, clean, constant and versatile. </br></br>Editor in Chief: Jamie Ortega </br></br></br>Design Direction: Nikki Mirsaeid </br></br></br>Collaborators: Features include interviews with Brian Procell, Osei-Duro, #jacques-Elliott, and XXBC. Essays by Rachel Hodin and Jamie Ortega. Photography from Adam Katz Sinding, Nekole Kemelle, Shanita Sims, Koa Pennock, Ruvan Wijesooriya, and James Parker. Illustrations by Jonah Leslie. </br></br>Link: sumzine.com </br> close</br></br><span id=\"lightBoxClose\" class=\"footer-button\">XCLOSEX</span>",
                 "images": ["assets/stylesheets/content/sum/img/2_SUMZINE.jpg", "assets/stylesheets/content/sum/img/3_SUMZINE.jpg", "assets/stylesheets/content/sum/img/4_SUMZINE.jpg" ,        "assets/stylesheets/content/sum/img/4_SUMZINE.jpg", "assets/stylesheets/content/sum/img/5_SUMZINE.jpg"] 
             },
             "mirett" : {
@@ -93,6 +93,17 @@
             });
             setTimeout(setKeys, 2350);
         }
+
+
+        //LIGHTBOX ONLOAD
+        $("#image-box").click(function() {
+            $("#loading-spinner").fadeOut();
+            $('#loading-screen').delay(2350).fadeOut('slow');
+            $('body').delay(2350).css({
+                'overflow': 'visible'
+            });
+            setTimeout(setKeys, 2350);
+        });
         
         function removeTop() {
             $stickThis.css({top: ''});
@@ -101,7 +112,7 @@
         //FOR INDEX TITLES
 
         $stickThis.stick_in_parent({
-             offset_top: 290 ,recalc_every: 600
+             offset_top: 290 ,recalc_every: 100
          })
          .on("sticky_kit:stick", function(e) {
              $(".title").removeClass("blank-loose");
@@ -117,49 +128,50 @@
          //scrolltop change image on HOMEPAGE
 
         var curentProject;
-         
-         $(window).scroll(function() {    
+         var lastScrollTop = 0;
+         $(window).scroll(function(event) {    
             var scroll = $(window).scrollTop();
-        
             
-                if (scroll < 250){
-                    $("#image-box").removeClass()
-                    $('a').removeAttr('clickIt')
-                }
-                if (scroll >= 250) {
-                    $("#image-box").removeClass()
-                    $("#image-box").addClass("im-sum")
-                    curentProject = 'sumzine';
-                } 
-                if (scroll >= 750) {
-                    $("#image-box").removeClass()
-                    $("#image-box").addClass("im-mir")
-                    curentProject = 'mirett';
-                } 
-                if (scroll >= 1250) {
-                    $("#image-box").removeClass()
-                    $("#image-box").addClass("im-sh1")
-                    curentProject = 'sher1';
-                } 
-                if (scroll >= 1750) {
-                    $("#image-box").removeClass()
-                    $("#image-box").addClass("im-oc") //THIS IS TEMPORARY, SWAP WITH IM-SH2 WHEN READY
-                } 
-                if (scroll >= 2250) {
-                    $("#image-box").removeClass()
-                   // $("#image-box").addClass("im-fwd")
-                } 
-               //COMMENTED OUT TO AVOID BROKEN IMAGE IN FOOTER */
-                if (scroll >= 2750) {
-                    $("#image-box").removeClass()
-                    $("#image-box").addClass("im-alt")
-                } 
-                 if (scroll >= 3250) {
-                    $("#image-box").removeClass()
-                    $("#image-box").addClass("im-oc")
-                    curentProject = 'ocblog';
-                } 
-           
+                    if (scroll < 250){
+                        $("#image-box").removeClass()
+                        $('a').removeAttr('clickIt')
+                    }
+                    if (scroll >= 250) {
+                        $("#image-box").removeClass()
+                        $("#image-box").addClass("im-sum")
+                        curentProject = 'sumzine';
+                    } 
+                    if (scroll >= 750) {
+                        $("#image-box").removeClass()
+                        $("#image-box").addClass("im-mir")
+                        curentProject = 'mirett';
+                    } 
+                    if (scroll >= 1250) {
+                        $("#image-box").removeClass()
+                        $("#image-box").addClass("im-sh1")
+                        curentProject = 'sher1';
+                    } 
+                    if (scroll >= 1750) {
+                        $("#image-box").removeClass()
+                        $("#image-box").addClass("im-oc") //THIS IS TEMPORARY, SWAP WITH IM-SH2 WHEN READY
+                    } 
+                    if (scroll >= 2250) {
+                        $("#image-box").removeClass()
+                       // $("#image-box").addClass("im-fwd")
+                    } 
+                        //COMMENTED OUT TO AVOID BROKEN IMAGE IN FOOTER 
+                        /*
+                     if (scroll >= 2750) {
+                        $("#image-box").removeClass()
+                        $("#image-box").addClass("im-alt")
+                    } 
+                    if (scroll >= 3250) {
+                       $("#image-box").removeClass()
+                       $("#image-box").addClass("im-oc")
+                       curentProject = 'ocblog';
+                    } 
+                    */
+                
         });
         
 
