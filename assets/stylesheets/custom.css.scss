@@ -125,7 +125,7 @@ body { min-height: 100%; overflow: hidden; }
 
 
 
-#lightBoxContent { 
+#lightBoxContent{ 
     background: rgba(0,0,0,0);
     //float:right;
     //opacity: .1;
@@ -134,10 +134,14 @@ body { min-height: 100%; overflow: hidden; }
     //border: 2px solid #fff; 
     position: fixed; 
     overflow: scroll;
-    margin: -18% 0 0 0; 
+    margin: 20% 0 0 0 ; 
     display: none; 
     //pointer-events: none;
     z-index: 5525; 
+}
+
+#imageZone{
+  margin-top: 80px;
 }
 
 .box-spacer{
@@ -147,6 +151,7 @@ body { min-height: 100%; overflow: hidden; }
 //AREA FOR IMAGES IN LIGHTBOX, NOT THE TEXT
 .ft-content{
   margin-left: auto;
+  position: absolute;
   display: block;
   margin-right: auto;
   width: 99%;
@@ -621,6 +626,12 @@ body{
   }
   footer{
   height: 300px;
+  }
+  #lightBoxContent img{
+    max-width: 80%;
+  }
+  #image-zone{
+    //max-width: 80%;
   }
 }
 
