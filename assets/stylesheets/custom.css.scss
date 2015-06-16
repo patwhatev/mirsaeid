@@ -310,12 +310,11 @@ header {
     background-position: center center;
     //border: 2px solid red;
     transform: scale(1); /* 1/10 of the original size */
-    
+    transition: all 0.5s ease-in-out;
 }
 
 #image-box:hover{
   transform: scale(1.1); /* 1/10 of the original size */
-    transition: all 0.5s ease-in-out;
     z-index: 1000 !important;
 }
 
@@ -597,5 +596,31 @@ body{
 
 
 /*MOBILE STYLES */
+@media only screen and (max-width: 480px) {
+  #logo{
+    font-size: 38px;
+  }
 
+  #image-box{
+    width: 300px;
+    height: 300px;
+    //padding-left: -50px;
+    margin: 160px 0 0 60px;
+  }
+
+  .index-title{
+    font-size: 28px;
+  }
+  .index-box{
+    margin-right: -20px;
+  }
+
+  .ft-text{
+    font-size: 5.5vw;
+    padding-left: 10px;
+  }
+  footer{
+  height: 300px;
+  }
+}
 

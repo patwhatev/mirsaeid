@@ -12,7 +12,7 @@
         var $stickThis = $('.stick-this');
         var projects = {
             "sumzine": {
-                "text": "SUMZINE </br>Sumzine is a biannual slow-fashion zine based out of NYC. We carry the torch of Dame Westwood, \"Buy less, choose well, make it last!\" </br></br> Not your typical sustainability-loving, fashion editorial magazine. We wanted to put aside that \"go green hippiness\" and bring in the cool, New York City downtown chic vibes. </br></br>The design of Sumzine is vibrant and bold, with a mixture of earthy feels. Since Sumzine's theme changes with every issue, we wanted to keep the branding and design simple, clean, constant and versatile. </br></br>Editor in Chief: Jamie Ortega </br></br></br>Design Direction: Nikki Mirsaeid </br></br></br>Collaborators: Features include interviews with Brian Procell, Osei-Duro, #jacques-Elliott, and XXBC. Essays by Rachel Hodin and Jamie Ortega. Photography from Adam Katz Sinding, Nekole Kemelle, Shanita Sims, Koa Pennock, Ruvan Wijesooriya, and James Parker. Illustrations by Jonah Leslie. </br></br>Link: sumzine.com </br> close</br></br><span id=\"lightBoxClose\" class=\"footer-button\">XCLOSEX</span>",
+                "text": "SUMZINE </br>Sumzine is a biannual slow-fashion zine based out of NYC. We carry the torch of Dame Westwood, \"Buy less, choose well, make it last!\" </br></br> Not your typical sustainability-loving, fashion editorial magazine. We wanted to put aside that \"go green hippiness\" and bring in the cool, New York City downtown chic vibes. </br></br>The design of Sumzine is vibrant and bold, with a mixture of earthy feels. Since Sumzine's theme changes with every issue, we wanted to keep the branding and design simple, clean, constant and versatile. </br></br>Editor in Chief: Jamie Ortega </br></br></br>Design Direction: Nikki Mirsaeid </br></br></br>Collaborators: Features include interviews with Brian Procell, Osei-Duro, #jacques-Elliott, and XXBC. Essays by Rachel Hodin and Jamie Ortega. Photography from Adam Katz Sinding, Nekole Kemelle, Shanita Sims, Koa Pennock, Ruvan Wijesooriya, and James Parker. Illustrations by Jonah Leslie. </br></br>Link: sumzine.com </br></br></br><span id=\"lightBoxClose\" class=\"footer-button\"></span>",
                 "images": ["assets/stylesheets/content/sum/img/2_SUMZINE.jpg", "assets/stylesheets/content/sum/img/3_SUMZINE.jpg", "assets/stylesheets/content/sum/img/4_SUMZINE.jpg" ,        "assets/stylesheets/content/sum/img/4_SUMZINE.jpg", "assets/stylesheets/content/sum/img/5_SUMZINE.jpg"] 
             },
             "mirett" : {
@@ -66,9 +66,9 @@
          $clickIt.click(function(e) {
 
              $lightBox.fadeIn(function() {
+                $('body').addClass("body-fixed")
                  $lightBoxContent.show();
                  render(projects[curentProject]);
-                    $('body').addClass("body-fixed")
                     $('div').css("pointer-events", "auto");
 
         
