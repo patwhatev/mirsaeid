@@ -316,7 +316,7 @@ header {
     background-position: center center;
     //border: 2px solid red;
     transform: scale(1); /* 1/10 of the original size */
-    transition: all 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
 }
 
 #image-box:hover{
@@ -389,14 +389,14 @@ img {
     margin: 0px 0;
     //vertical-align: none !important;
     overflow: hidden;
-    width: auto;
+    min-width: 100%;
    // border: 2px solid red;
      }
 
      .index-title{
   font-size: 300%;
   text-align: right;
-  max-width: auto;
+  //max-width: auto;
   white-space: nowrap;
   //overflow: hidden;
   z-index: 3000 !important;
@@ -414,9 +414,11 @@ img {
 }
 
 div[style]{
-  display: block ;  
-  bottom: 0px;
+  display: block ; 
+  max-width: auto;
+  right: 0;
  pointer-events: none;
+ //border: 3px solid red;
 }
 
 .pointer{
@@ -425,25 +427,32 @@ div[style]{
 
   .title {
     //border: 2px solid white;
+    right: 0;
     z-index: 3000 !important;
 }
 
 
-
+.is-stuck{
+  margin-left: -50px;
+  width: 100%
+}
 
 .title-loose{
-	position: relative;
+	position: absolute;
+  right: 0;
   margin: 0px 20px !important;
   z-index: 3000 !important;
 
 }
 
 .is-stuck{
-  
+  padding: 0 0;
+  margin: 0 0;
+  right: 0 !important;
 }
 
 .stick-this{
-
+  right: 0;
 }
 
 
@@ -573,7 +582,7 @@ footer small {
 body{
   margin: 0 0;
   overflow: auto;
-    padding-right: 15px;
+    //padding-right: 15px;
 }
 
 .footer-button{

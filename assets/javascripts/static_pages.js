@@ -64,7 +64,7 @@
          }
         
          $clickIt.click(function(e) {
-
+            if ($('#image-box').css('background').indexOf('url') < 0) return;
              $lightBox.fadeIn(function() {
                 $('body').addClass("body-fixed")
                  $lightBoxContent.show();
@@ -121,7 +121,6 @@
          .on("sticky_kit:unstick", function(e) {
              removeTop();
              $(".title").addClass("blank-loose");
-            
          });
          
          
@@ -131,6 +130,8 @@
          var lastScrollTop = 0;
          $(window).scroll(function(event) {    
             var scroll = $(window).scrollTop();
+
+                $("div [style*='baseline']").hide();
             
                     if (scroll < 250){
                         $("#image-box").removeClass()
@@ -156,7 +157,7 @@
                         $("#image-box").addClass("im-oc") //THIS IS TEMPORARY, SWAP WITH IM-SH2 WHEN READY
                     } 
                     if (scroll >= 2250) {
-                        $("#image-box").removeClass()
+                        $(".im-oc").removeClass()
                        // $("#image-box").addClass("im-fwd")
                     } 
                         //COMMENTED OUT TO AVOID BROKEN IMAGE IN FOOTER 
