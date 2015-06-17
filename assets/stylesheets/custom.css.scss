@@ -387,6 +387,7 @@ img {
     //z-index: 2000 !important;
     height: 500px;
     padding-bottom: 0px;
+    overflow-x:hidden;
     position: relative !important;
     margin: 0px 0;
     //vertical-align: none !important;
@@ -400,6 +401,7 @@ img {
   text-align: right;
   max-width: auto;
   white-space: nowrap;
+  overflow-x:hidden
   //overflow: hidden;
   z-index: 3000 !important;
   color: #fff;
@@ -418,6 +420,7 @@ img {
 div[style]{
   display: block ;  
  // bottom: 0px;
+ overflow-x:hidden;
  pointer-events: none;
 }
 
