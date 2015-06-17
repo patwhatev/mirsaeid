@@ -142,6 +142,7 @@ body { min-height: 100%; overflow: hidden; }
 
 #imageZone{
   margin-top: 80px;
+  text-align: center;
 }
 
 .box-spacer{
@@ -165,9 +166,10 @@ body { min-height: 100%; overflow: hidden; }
   color: #fff;
   margin: 0px 20px;
   display: block;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
   font-size: 24px;
-  font-style: normal;
+  text-align: left !important;
+  font-style: bold;
   font-variant: normal;
   font-weight: 500;
   
@@ -208,14 +210,14 @@ position: fixed;
 
 #lightBoxClose { 
     //display: inline-block; 
-    text-align: center; 
+    letter-spacing: 1px; 
     margin: 0 0;
     float: left; 
     width: 20px;
     //cursor: pointer;  
     //padding: 8px 12px;  
     font-family: arial;  
-    bacckground-color: #000; 
+    background-color: #000; 
     left: 20px; 
     //z-index: 550; 
     font-weight: 700; }
@@ -592,6 +594,8 @@ body{
 ::-webkit-scrollbar { 
     display: none; 
 }
+
+
 
 
 /*SMALLER SCREEN */
