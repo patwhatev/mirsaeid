@@ -4,9 +4,8 @@
     color: white;
     font-size: 5vw;
     padding-top: 50%;
-    margin: 0 750px;
-
-    
+    margin: 0 500px;
+    margin-left: 600px;
 }
 
 body { min-height: 100%; overflow: hidden; }
@@ -135,7 +134,7 @@ body { min-height: 100%; overflow: hidden; }
     //border: 2px solid #fff; 
     position: fixed; 
     overflow: scroll;
-    margin: 20% 0 0 0 ; 
+    margin: 0 0 ; 
     display: none; 
     //pointer-events: none;
     z-index: 5525; 
@@ -295,7 +294,7 @@ header {
 
 #images{
     min-width: 70%;
-    //height: 50%;
+    height: 50%;
     margin: 0 auto;
     position: fixed;
     float:center;
@@ -307,7 +306,7 @@ header {
 
 
 #image-box{
-    margin: 90px 25%;
+    margin: 9% 25%;
     position: fixed;
     width: 500px;
     height: 500px;
@@ -316,12 +315,12 @@ header {
     background-position: center center;
     //border: 2px solid red;
     transform: scale(1); /* 1/10 of the original size */
-    transition: background-image 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #image-box:hover{
   transform: scale(1.1); /* 1/10 of the original size */
-    //z-index: 1000 !important;
+    z-index: 1000 !important;
 }
 
 //image classes
@@ -375,10 +374,10 @@ img {
     display: block;
     position: relative;
     bottom: 0;
-  	right: 0;
-  	left: 0;
-  	//margin: 0px 0px 0px 720px;
-  	
+    right: 0;
+    left: 0;
+    //margin: 0px 0px 0px 720px;
+    
 }
 
  .index-box {
@@ -389,14 +388,14 @@ img {
     margin: 0px 0;
     //vertical-align: none !important;
     overflow: hidden;
-    min-width: 100%;
+    width: auto;
    // border: 2px solid red;
      }
 
      .index-title{
   font-size: 300%;
   text-align: right;
-  //max-width: auto;
+  max-width: auto;
   white-space: nowrap;
   //overflow: hidden;
   z-index: 3000 !important;
@@ -414,11 +413,9 @@ img {
 }
 
 div[style]{
-  display: block ; 
-  max-width: auto;
-  right: 0;
+  display: block ;  
+ // bottom: 0px;
  pointer-events: none;
- //border: 3px solid red;
 }
 
 .pointer{
@@ -427,18 +424,15 @@ div[style]{
 
   .title {
     //border: 2px solid white;
-    right: 0;
+    position: absolute;
     z-index: 3000 !important;
 }
 
 
-.is-stuck{
-  margin-left: -50px;
-  width: 100%
-}
+
 
 .title-loose{
-	position: absolute;
+  position: absolute;
   right: 0;
   margin: 0px 20px !important;
   z-index: 3000 !important;
@@ -446,13 +440,11 @@ div[style]{
 }
 
 .is-stuck{
-  padding: 0 0;
-  margin: 0 0;
-  right: 0 !important;
+  
 }
 
 .stick-this{
-  right: 0;
+
 }
 
 
@@ -582,7 +574,6 @@ footer small {
 body{
   margin: 0 0;
   overflow: auto;
-    //padding-right: 15px;
 }
 
 .footer-button{
@@ -644,4 +635,3 @@ body{
     //max-width: 80%;
   }
 }
-

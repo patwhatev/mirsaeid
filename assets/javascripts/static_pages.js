@@ -67,6 +67,7 @@
             if ($('#image-box').css('background').indexOf('url') < 0) return;
              $lightBox.fadeIn(function() {
                 $('body').addClass("body-fixed")
+                $('#lightBoxContent').addClass("lb-free")
                  $lightBoxContent.show();
                  render(projects[curentProject]);
                     $('div').css("pointer-events", "auto");
