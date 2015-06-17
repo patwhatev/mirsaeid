@@ -4,8 +4,9 @@
     color: white;
     font-size: 5vw;
     padding-top: 50%;
-    margin: 0 500px;
-    margin-left: 600px;
+    margin: 0 750px;
+
+    
 }
 
 body { min-height: 100%; overflow: hidden; }
@@ -294,7 +295,7 @@ header {
 
 #images{
     min-width: 70%;
-    height: 50%;
+    //height: 50%;
     margin: 0 auto;
     position: fixed;
     float:center;
@@ -306,7 +307,7 @@ header {
 
 
 #image-box{
-    margin: 9% 25%;
+    margin: 90px 25%;
     position: fixed;
     width: 500px;
     height: 500px;
@@ -320,7 +321,7 @@ header {
 
 #image-box:hover{
   transform: scale(1.1); /* 1/10 of the original size */
-    z-index: 1000 !important;
+    //z-index: 1000 !important;
 }
 
 //image classes
