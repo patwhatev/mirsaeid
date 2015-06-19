@@ -197,17 +197,6 @@ body { min-height: 100%; overflow: hidden; }
   position: fixed;
 }
 
-/*
-position: fixed;
-    width: 100%;
-    height: 70%;
-    z-index: -2200;
-    background-image: url("./assets/content/mirett/IMAGES/8_MIRETT_EDITORIAL.jpg/");
-    background-repeat: no-repeat;
-    background-position: center center;
-*/
-
-
 #lightBoxClose { 
     //display: inline-block; 
     letter-spacing: 1px; 
@@ -234,12 +223,16 @@ body {
   cursor: url(CURSOR/cursor-03.png), auto;
 }
 
+.lb-cursor{
+  cursor: url(CURSOR/cursor-02.png), auto;
+}
+
 /* nav title */
 
 .navbar{
     position: fixed;
     height: 100px;
-    min-width: 100%;
+    min-width: 110%;
     background-color: #000;
     margin: -10px 0 0 -8px;
     
@@ -282,7 +275,7 @@ header {
     //padding-bottom: 30px;
     display: block;
     
-    min-width: 100%;
+    min-width: 110%;
     z-index: 3000;
     margin: -10px 0;  
 }
@@ -294,13 +287,6 @@ header {
 
 /* imagery */
 
-#images{
-    min-width: 70%;
-    height: 50%;
-    margin: 0 auto;
-    position: fixed;
-    float:center;
-}
 
 
 
@@ -406,7 +392,6 @@ img {
   z-index: 3000 !important;
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
-  margin: 0px 20px !important;
  // border: 2px solid blue;
 }
 
@@ -418,11 +403,7 @@ img {
 }
 
 div[style]{
-  //display: block ;  
- // bottom: 0px;
  pointer-events: none;
- padding-right: 10px !important;
- //border: 2px solid red;
 }
 
 .pointer{
@@ -435,17 +416,6 @@ div[style]{
     z-index: 3000 !important;
 }
 
-.title-post{
-  padding-right: -100px !important;
-}
-
-.title-adj{
-  padding-right: 10px !important;
-}
-
-
-
-
 .title-loose{
   position: absolute;
   right: 0;
@@ -455,9 +425,7 @@ div[style]{
 }
 
 .is-stuck{
-   margin: 0px 20px !important;
-   display: block !important;
-   right: 0px;
+   
 }
 
 .stick-this{
@@ -598,7 +566,10 @@ footer small {
 }
 
 body{
-  margin: 0 10px;
+  width: 100%;
+  right: 0;
+
+  margin: 0 0px;
   overflow: auto;
 }
 

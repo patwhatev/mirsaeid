@@ -66,10 +66,12 @@
          $clickIt.click(function(e) {
             if ($('#image-box').css('background').indexOf('url') < 0) return;
              $lightBox.fadeIn(function() {
+                $lightBoxContent.fadeIn();
+                $('body').addClass("lb-cursor")
                 $('body').addClass("body-fixed")
-                $('#lightBoxContent').addClass("lb-free")
+                render(projects[curentProject]);
                  $lightBoxContent.show();
-                 render(projects[curentProject]);
+                $('#lightBoxContent').addClass("lb-free")
                     $('div').css("pointer-events", "auto");
 
         
@@ -82,6 +84,7 @@
              $('body').removeClass("body-fixed")
              $('div').css("pointer-events", "auto");
              $('#image-box').css("display", "block");
+             $('body').removeClass("lb-cursor")
 
          });
          
@@ -117,15 +120,12 @@
          })
          .on("sticky_kit:stick", function(e) {
              $(".title").removeClass("blank-loose");
-             $(".title").addClass("title-adj");
 
 
          })
          .on("sticky_kit:unstick", function(e) {
              removeTop();
              $(".title").addClass("blank-loose");
-             $(".title").removeClass("title-adj");
-             $(".title").addClass("title-post");
          });
          
          
