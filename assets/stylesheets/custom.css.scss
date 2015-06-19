@@ -387,7 +387,7 @@ img {
     //z-index: 2000 !important;
     height: 500px;
     padding-bottom: 0px;
-    overflow-x:hidden;
+   // overflow-x:hidden;
     position: relative !important;
     margin: 0px 0;
     //vertical-align: none !important;
@@ -402,11 +402,11 @@ img {
   max-width: auto;
   white-space: nowrap;
   overflow-x:hidden
-  //overflow: hidden;
+  overflow: hidden;
   z-index: 3000 !important;
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
-  margin: 0px 0px !important;
+  margin: 0px 20px !important;
  // border: 2px solid blue;
 }
 
@@ -414,14 +414,15 @@ img {
   text-align:center;
   width: auto;
   height: 0;
- // border: 2px solid green;
+  //border: 2px solid green;
 }
 
 div[style]{
-  display: block ;  
+  //display: block ;  
  // bottom: 0px;
- overflow-x:hidden;
  pointer-events: none;
+ padding-right: 10px !important;
+ //border: 2px solid red;
 }
 
 .pointer{
@@ -432,6 +433,14 @@ div[style]{
     //border: 2px solid white;
     position: absolute;
     z-index: 3000 !important;
+}
+
+.title-post{
+  padding-right: -100px !important;
+}
+
+.title-adj{
+  padding-right: 10px !important;
 }
 
 
@@ -446,7 +455,9 @@ div[style]{
 }
 
 .is-stuck{
-  
+   margin: 0px 20px !important;
+   display: block !important;
+   right: 0px;
 }
 
 .stick-this{
@@ -456,6 +467,15 @@ div[style]{
 
 
 /* typography */
+
+i {
+  font-size: 80%;
+}
+b{
+  font-size: 115%;
+  color: #A0A0A0;
+
+}
 
 @font-face {
 font-family: novecento;
@@ -551,7 +571,7 @@ footer {
 .ft-text{
   font-size: 55px;
   color: #fff;
-
+  margin: 0 15px;
 
 }
 
@@ -578,7 +598,7 @@ footer small {
 }
 
 body{
-  margin: 0 0;
+  margin: 0 10px;
   overflow: auto;
 }
 
@@ -627,6 +647,7 @@ body{
   }
   .index-box{
     //margin-right: -20px;
+    position: absolute;
   }
 
   .ft-text{
