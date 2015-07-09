@@ -1,5 +1,5 @@
 /* animation CSS start */
-/* adding a comment to change the file*/
+
 .load-text{
     color: white;
     font-size: 5vw;
@@ -156,6 +156,7 @@ body { min-height: 100%; overflow: hidden; }
   display: block;
   margin-right: auto;
   width: 99%;
+  pointer-events: none;
 } 
 
 
@@ -193,8 +194,7 @@ body { min-height: 100%; overflow: hidden; }
 }
 
 .body-fixed{
-  overflow: hidden;
-  position: fixed;
+  overflow: hidden !important;
 }
 
 #lightBoxClose { 
@@ -217,6 +217,9 @@ body { min-height: 100%; overflow: hidden; }
 /* cursor */
 a {
    cursor: url(CURSOR/cursor-01.png), auto;
+   color: #D0D0D0 ;
+   text-decoration: none;
+   font-size: 1.4vw;
 }
 
 body {
@@ -356,6 +359,7 @@ img {
   background-image: url("content/ocb/img/OCBLOG_3.jpg");
   opacity: 0.0;
 }
+
 
 
 //image classes end
@@ -607,8 +611,8 @@ body{
   }
 
   #image-box{
-    //margin: 9% 25%;
-    margin-left: 350px;
+    margin: 15% 25%;
+    margin-left: 450px;
     position: fixed;
     width: 500px;
     height: 500px;
@@ -621,7 +625,7 @@ body{
 }
 
   .index-title{
-    font-size: 58px;
+    font-size: 48px;
     margin: 0 0;
     z-index: 5500 !important;
   }
@@ -629,6 +633,11 @@ body{
     //margin-right: -20px;
     position: absolute;
   }
+
+  .load-text{
+    
+    margin-left: 865px;
+}
 
   .ft-text{
     font-size: 3.5vw;
@@ -663,20 +672,32 @@ body{
     width: 300px;
     height: 300px;
     //padding-left: -50px;
-    margin: 160px 0 0 60px;
+    margin: 160px 0 0 50px;
   }
 
   .index-title{
     font-size: 28px;
   }
-  .index-box{
-    margin-right: -20px;
-  }
 
-  .ft-text{
-    font-size: 5.5vw;
+   .ft-text{
+    font-size: 4.5vw;
     padding-left: 10px;
   }
+
+  .load-text{
+    font-size: 9.4vw;
+    margin-left: 165px;
+}
+
+   .footer-test{
+    font-size: 3.5vw;
+    padding-left: 10px;
+  }
+
+   a{
+   font-size: 3.5vw;
+   }
+
   footer{
   height: 300px;
   }
