@@ -142,6 +142,7 @@
             
                     if (scroll < 250){
                         $("#image-box").removeClass()
+                        $("#image-box").addClass("im-start")
                         $('a').removeAttr('clickIt')
                     }
                     if (scroll >= 250) {
@@ -167,6 +168,7 @@
                     } 
                     if (scroll >= 2250) {
                         $(".im-oc").removeClass()
+                        $("#image-box").addClass("im-end")
                        // $("#image-box").addClass("im-fwd")
                     } 
                         //COMMENTED OUT TO AVOID BROKEN IMAGE IN FOOTER 

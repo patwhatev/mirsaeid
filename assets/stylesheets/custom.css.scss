@@ -319,6 +319,11 @@ img {
   //z-index: 4000;
 }
 
+.im-start{
+  background-image:url("content/sum/img/SUMZINE_COVER-02.jpg");
+  opacity: 0.0;
+}
+
 .im-sum{
   background-image:url("content/sum/img/SUMZINE_COVER-02.jpg");
 }
@@ -347,6 +352,10 @@ img {
   background-image: url("content/ocb/img/OCBLOG_3.jpg");
 }
 
+.im-end{
+  background-image: url("content/ocb/img/OCBLOG_3.jpg");
+  opacity: 0.0;
+}
 
 
 //image classes end
