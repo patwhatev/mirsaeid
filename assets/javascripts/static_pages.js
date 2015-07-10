@@ -65,20 +65,18 @@
         
          $clickIt.click(function(e) {
             if ($('#image-box').css('background').indexOf('url') < 0) return;
-             $lightBox.fadeIn(function() {
+            $('body').addClass("lb-cursor").addClass("body-fixed");
+            render(projects[curentProject]);
+            $lightBox.fadeIn(function() {   
                 $lightBoxContent.fadeIn();
-                $('body').addClass("lb-cursor")
-                $('body').addClass("body-fixed")
                 $('#lightBoxContent').removeAttr('clickIt')
                 render(projects[curentProject]);
-                 $lightBoxContent.show();
+                $lightBoxContent.show();
                 $('#lightBoxContent').addClass("lb-free")
                 $('div').css("pointer-events", "auto");
                 $('.ft-content').css("pointer-events", "none");
-
-        
-             });
-             /* positionLightBox1(); */
+            });
+         
          });
         
          $lightBoxClose.click(function() {
