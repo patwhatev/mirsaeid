@@ -150,13 +150,13 @@
                     if (scroll >= 250) {
                         $("#image-box").removeClass()
 
-                        $("#image-box").addClass("im-sum")
-                        curentProject = 'sumzine';
+                        $("#image-box").addClass("im-mir")
+                        curentProject = 'mirett';
                     } 
                     if (scroll >= 750) {
                         $("#image-box").removeClass()
-                        $("#image-box").addClass("im-mir")
-                        curentProject = 'mirett';
+                        $("#image-box").addClass("im-sum")
+                        curentProject = 'sumzine';
                     } 
                     if (scroll >= 1250) {
                         $("#image-box").removeClass()
