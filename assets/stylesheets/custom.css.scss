@@ -76,11 +76,11 @@ body { min-height: 100%; overflow: hidden; }
 
 /* lightbox CSS start */
 
-.lightbox-link {background: #fff; 
-      border: none;  
-      border-left: 1px solid black;
-      z-index: 6000;
-  
+.lightbox-link {
+  background: #fff; 
+  border: none;  
+  border-left: 1px solid black;
+  z-index: 6000;
 }
 
 .lightbox-link:hover { 
@@ -89,7 +89,6 @@ body { min-height: 100%; overflow: hidden; }
   -moz-transition:color .5s ease-in; 
   -o-transition:color .5s ease-in; 
   transition:color .5s ease-in; 
-  
 }
 
 //background of lightbox

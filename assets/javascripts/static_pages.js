@@ -88,8 +88,10 @@
 
          });
          
+
         //loading animation
         window.onload = function() {
+
             $("#loading-spinner").fadeOut();
             $('#loading-screen').delay(2350).fadeOut('slow');
             $('body').delay(2350).css({
@@ -128,6 +130,8 @@
              $(".title").addClass("blank-loose");
          });
          
+
+
          
          //scrolltop change image on HOMEPAGE
 
