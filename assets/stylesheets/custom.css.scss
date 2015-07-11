@@ -293,6 +293,10 @@ header {
 img { 
 }
 
+.hidden{
+  display: none;
+}
+
 .im-start{
   background-image:url("content/mir/img/MIRETT_COVER.jpg");
   opacity: 0.0;
@@ -657,6 +661,6 @@ body{
     max-width: 80%;
   }
   #image-zone{
-  
+
   }
 }
