@@ -567,7 +567,7 @@ body{
   }
 /*HUGE SCREENS*/
 
-@media only screen and (min-width:1040px){
+@media only screen and (min-width:1490px){
         #logo{
     font-size: 78px;
     letter-spacing: 1px;
@@ -590,7 +590,7 @@ body{
   .index-title{
     font-size: 48px;
     margin: 0 0;
-    margin-right: 250px;
+    //margin-right: 250px;
     z-index: 5500 !important;
   }
   .index-box{
@@ -636,7 +636,6 @@ body{
     width: 550px;
     height: 550px;
     margin: 380px 0 0 0px;
-    border: 3px solid red;
     margin-top: 500px;
     margin-left: 180px;
   }
