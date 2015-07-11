@@ -1,4 +1,6 @@
-/* animation CSS start */
+
+
+/* ANIMATION CSS START */
 
 .load-text{
     color: white;
@@ -67,14 +69,11 @@ body { min-height: 100%; overflow: hidden; }
 
 
 }
+/* ANIMATION CSS ENT */
 
 
 
-/* animation CSS end */
-
-
-
-/* lightbox CSS start */
+/* LIGHTBOX CSS START */
 
 .lightbox-link {
   background: #fff; 
@@ -83,22 +82,9 @@ body { min-height: 100%; overflow: hidden; }
   z-index: 6000;
 }
 
-.lightbox-link:hover { 
-  color: red; 
-  -webkit-transition:color .5s ease-in; 
-  -moz-transition:color .5s ease-in; 
-  -o-transition:color .5s ease-in; 
-  transition:color .5s ease-in; 
+//LIGHTBOX BG
+#lightBoxDiv {        
 }
-
-//background of lightbox
-
-
-
-#lightBoxDiv {  
-       
-}
-
 #lightBoxDiv {  
   position: fixed !important;
   top: 0; 
@@ -124,18 +110,15 @@ body { min-height: 100%; overflow: hidden; }
 
 
 
+
 #lightBoxContent{ 
     background: rgba(0,0,0,0);
-    //float:right;
-    //opacity: .1;
     height: 100%; 
-    width: 100%; 
-    //border: 2px solid #fff; 
+    width: 100%;  
     position: fixed; 
     overflow: scroll;
     margin: 0 0 ; 
     display: none; 
-    //pointer-events: none;
     z-index: 5525; 
 }
 
@@ -197,23 +180,23 @@ body { min-height: 100%; overflow: hidden; }
 }
 
 #lightBoxClose { 
-    //display: inline-block; 
     letter-spacing: 1px; 
     margin: 0 0;
     float: left; 
-    width: 20px;
-    //cursor: pointer;  
-    //padding: 8px 12px;  
+    width: 20px;  
     font-family: arial;  
     background-color: #000; 
     left: 20px; 
-    //z-index: 550; 
-    font-weight: 700; }
+    font-weight: 700; 
+}
 
-/* lightbox CSS end */
+/* LIGHTBOX CSS END */
+
+
 
 
 /* cursor */
+
 a {
    cursor: url(CURSOR/cursor-01.png), auto;
    color: #D0D0D0 ;
@@ -229,7 +212,8 @@ body {
   cursor: url(CURSOR/cursor-02.png), auto;
 }
 
-/* nav title */
+
+/* nav title and navbar */
 
 .navbar{
     position: fixed;
@@ -251,8 +235,6 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
-
-
 
 header {
    background-color: black;
@@ -287,13 +269,9 @@ header {
  color: transparent; 
 }
 
-/* imagery */
 
 
-
-
-/* index  */
-
+/* IMAGE CLASSES */
 
 #image-box{
     margin: 9% 25%;
@@ -314,11 +292,8 @@ header {
     z-index: 1000 !important;
 }
 
-//image classes
 
-
-img {
-  //z-index: 4000;
+img { 
 }
 
 .im-start{
@@ -359,17 +334,12 @@ img {
   opacity: 0.0;
 }
 
-
-
 //image classes end
 
 
 
 
-
-//STICKY KIT CSS
-//STICKY KIT CSS
-//STICKY KIT CSS
+/* INDEX TITLES AND STICKY KIT START  */
 
 .blank-loose{
     display: block;
@@ -444,9 +414,16 @@ div[style]{
 
 }
 
+/* INDEX TITLES AND STICKY KIT END */
+
 
 
 /* typography */
+
+@font-face {
+font-family: novecento;
+src: url("novecento.ttf") format('truetype');
+}
 
 i {
   font-size: 80%;
@@ -454,12 +431,6 @@ i {
 b{
   font-size: 115%;
   color: #A0A0A0;
-
-}
-
-@font-face {
-font-family: novecento;
-src: url("novecento.ttf") format('truetype');
 
 }
 
@@ -498,7 +469,7 @@ p {
 
 
 
-/* bottom gradient */
+/* bottom gradient on main page */
 
 
 .gradient-bottom{
@@ -523,6 +494,7 @@ p {
 
 
 /* footer */
+
  body {
     margin-bottom: 0px
     }
@@ -580,7 +552,6 @@ footer small {
 body{
   width: 100%;
   right: 0;
-
   margin: 0 0px;
   overflow: auto;
 }
@@ -601,7 +572,9 @@ body{
     display: none; 
 }
 
+
 /*HUGE SCREENS*/
+
 @media only screen and (min-width:1340px){
         #logo{
     font-size: 78px;
@@ -653,15 +626,10 @@ body{
   }
     }
 
-/*SMALLER SCREEN */
-
-
-
-
-
 
 
 /*MOBILE STYLES */
+
 @media only screen and (max-width: 480px) {
   #logo{
     font-size: 38px;

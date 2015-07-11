@@ -1,4 +1,3 @@
-////THE REAL SHIT
 
 (function() {
     var $document = $(document);
@@ -10,7 +9,7 @@
         var $clickIt = $('#clickIt');
         var $lightBoxClose = $('#lightBoxClose');
         var $stickThis = $('.stick-this');
-        var projects = {
+        var projects = { //this is where your lightbox image paths and text for the lightbox footer go
             "sumzine": {
                 "text": "</br>Sumzine is a biannual slow-fashion zine based out of NYC. We carry the torch of Dame Westwood, \"Buy less, choose well, make it last!\" </br></br> Not your typical sustainability-loving, fashion editorial magazine. We wanted to put aside that \"go green hippiness\" and bring in the cool, New York City downtown chic vibes. </br></br>The design of Sumzine is vibrant and bold, with a mixture of earthy feels. Since Sumzine's theme changes with every issue, we wanted to keep the branding and design simple, clean, constant and versatile. </br></br><b>Editor in Chief</b> | Jamie Ortega </br></br><b>Design Direction</b> | Nikki Mirsaeid </br></br><b>Collaborators</b> | Features include interviews with Brian Procell, Osei-Duro, #jacques-Elliott, and XXBC. Essays by Rachel Hodin and Jamie Ortega. Photography from Adam Katz Sinding, Nekole Kemelle, Shanita Sims, Koa Pennock, Ruvan Wijesooriya, and James Parker. Illustrations by Jonah Leslie. </br></br><b>Link</b> | <a href=\"http://www.sumzine.com\" target=blank>sumzine.com</a> </br></br>",
                 "images": ["assets/stylesheets/content/sum/img/2_SUMZINE.jpg", "assets/stylesheets/content/sum/img/3_SUMZINE.jpg", "assets/stylesheets/content/sum/img/4_SUMZINE.jpg" ,        "assets/stylesheets/content/sum/img/4_SUMZINE.jpg", "assets/stylesheets/content/sum/img/5_SUMZINE.jpg"] 
@@ -29,6 +28,8 @@
             }
         };
 
+
+        //PROJECT RENDERER, DO NOT ALTER
         function render(project) { // a key
             $('.footer-test').html(project.text) //put the response on the dom
 
@@ -48,7 +49,8 @@
         }
         
 
-         //lightbox
+
+         //LIGHTBOX JS
         function setKeys() {
             $document.keyup(function(e) {
                 if (e.keyCode == KEYCODE_ESC) {
@@ -115,7 +117,7 @@
             $stickThis.css({top: ''});
         }
                  
-        //FOR INDEX TITLES
+        //INDEX TITLES
 
         $stickThis.stick_in_parent({
              offset_top: 290 ,recalc_every: 5
@@ -141,10 +143,12 @@
             var scroll = $(window).scrollTop();
 
                 $("div [style*='baseline']").hide();
-            
+                    //these are case statements, where if you scroll to point x, change the behavior
+                    
+                    //starting image is transparent, to help fade into the first project properly
                     if (scroll < 250){
-                        $("#image-box").removeClass()
-                        $("#image-box").addClass("im-start")
+                        $("#image-box").removeClass() 
+                        $("#image-box").addClass("im-start") 
                         $('a').removeAttr('clickIt')
                     }
                     if (scroll >= 250) {
@@ -154,9 +158,9 @@
                         curentProject = 'mirett';
                     } 
                     if (scroll >= 750) {
-                        $("#image-box").removeClass()
-                        $("#image-box").addClass("im-sum")
-                        curentProject = 'sumzine';
+                        $("#image-box").removeClass() //create a clean slate
+                        $("#image-box").addClass("im-sum") //add the image to the box via css
+                        curentProject = 'sumzine'; //when clicked, render this project
                     } 
                     if (scroll >= 1250) {
                         $("#image-box").removeClass()
@@ -165,15 +169,15 @@
                     } 
                     if (scroll >= 1750) {
                         $("#image-box").removeClass()
-                        $("#image-box").addClass("im-oc") //THIS IS TEMPORARY, SWAP WITH IM-SH2 WHEN READY
-                        curentProject = 'ocblog';
+                        $("#image-box").addClass("im-oc") //THIS IS TEMPORARY, SWAP WITH IM-SH2 WHEN READY OR WHICHEVER PROJECT YOU CHOOSE
+                        curentProject = 'ocblog'; //swap this as well, you get the idea 
                     } 
                     if (scroll >= 2250) {
                         $(".im-oc").removeClass()
                         $("#image-box").addClass("im-end")
                        // $("#image-box").addClass("im-fwd")
                     } 
-                        //COMMENTED OUT TO AVOID BROKEN IMAGE IN FOOTER 
+                        //COMMENTED OUT 
                         /*
                      if (scroll >= 2750) {
                         $("#image-box").removeClass()
@@ -187,19 +191,6 @@
                     */
                 
         });
-        
-
-        //FOR IMAGES IN SAME DIV
-        // $stickThis.stick_in_parent({
-        //  offset_top: 250
-        // })
-        // .on("sticky_kit:stick", function(e) {
-        //     $(".blank").removeClass("blank-loose");
-        // })
-        // .on("sticky_kit:unstick", function(e) {
-        //     removeTop();
-        //     $(".blank").addClass("blank-loose");
-        // });
     
      });
 })();
