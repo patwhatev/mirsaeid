@@ -9,6 +9,7 @@
         var $clickIt = $('#clickIt');
         var $lightBoxClose = $('#lightBoxClose');
         var $stickThis = $('.stick-this');
+        var $viewport = $(window).width();
         var projects = { //this is where your lightbox image paths and text for the lightbox footer go
             "sumzine": {
                 "text": "</br>Sumzine is a biannual slow-fashion zine based out of NYC. We carry the torch of Dame Westwood, \"Buy less, choose well, make it last!\" </br></br> Not your typical sustainability-loving, fashion editorial magazine. We wanted to put aside that \"go green hippiness\" and bring in the cool, New York City downtown chic vibes. </br></br>The design of Sumzine is vibrant and bold, with a mixture of earthy feels. Since Sumzine's theme changes with every issue, we wanted to keep the branding and design simple, clean, constant and versatile. </br></br><b>Editor in Chief</b> | Jamie Ortega </br></br><b>Design Direction</b> | Nikki Mirsaeid </br></br><b>Collaborators</b> | Features include interviews with Brian Procell, Osei-Duro, #jacques-Elliott, and XXBC. Essays by Rachel Hodin and Jamie Ortega. Photography from Adam Katz Sinding, Nekole Kemelle, Shanita Sims, Koa Pennock, Ruvan Wijesooriya, and James Parker. Illustrations by Jonah Leslie. </br></br><b>Link</b> | <a href=\"http://www.sumzine.com\" target=blank>sumzine.com</a> </br></br>",
@@ -119,6 +120,24 @@
                  
         //INDEX TITLES
 
+
+        //MOBILE DETECTION FIX
+        if ($viewport < 1080) {
+            $stickThis.stick_in_parent({
+             offset_top: 700 ,recalc_every: 5
+         })
+         .on("sticky_kit:stick", function(e) {
+             $(".title").removeClass("blank-loose");
+
+
+         })
+         .on("sticky_kit:unstick", function(e) {
+             removeTop();
+             $(".title").addClass("blank-loose");
+         });
+
+        }  else
+
         $stickThis.stick_in_parent({
              offset_top: 290 ,recalc_every: 5
          })
@@ -130,6 +149,8 @@
          .on("sticky_kit:unstick", function(e) {
              removeTop();
              $(".title").addClass("blank-loose");
+
+
          });
          
 

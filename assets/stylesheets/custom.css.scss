@@ -562,10 +562,12 @@ body{
     display: none; 
 }
 
-
+.mobile-appendage{
+  display: none;
+  }
 /*HUGE SCREENS*/
 
-@media only screen and (min-width:1340px){
+@media only screen and (min-width:1040px){
         #logo{
     font-size: 78px;
     letter-spacing: 1px;
@@ -588,6 +590,7 @@ body{
   .index-title{
     font-size: 48px;
     margin: 0 0;
+    margin-right: 250px;
     z-index: 5500 !important;
   }
   .index-box{
@@ -618,21 +621,33 @@ body{
 
 /*MOBILE STYLES */
 
-@media only screen and (max-width: 480px) {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 680px) {
   #logo{
     font-size: 38px;
+  }
+
+  .mobile-appendage{
+  display: inherit;
   }
 
   #image-box{
     width: 550px;
     height: 550px;
-    margin: 180px 0 0 50px;
-    margin-left: 20px
+    margin: 380px 0 0 0px;
+    border: 3px solid red;
+    margin-top: 500px;
+    margin-left: 180px;
   }
 
   .index-title{
     font-size: 62px;
     white-space: normal;
+  }
+
+   .is-stuck{
+    color: yellow;
   }
 
    .ft-text{
