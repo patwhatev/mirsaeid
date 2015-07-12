@@ -282,10 +282,13 @@ header {
     background-position: center center;
     transform: scale(1); /* 1/10 of the original size */
     transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    
 }
 
 #image-box:hover{
-  transform: scale(1.1); /* 1/10 of the original size */
+  transform: scale(1.1); /* 11/10 of the original size */
     z-index: 1000 !important;
 }
 
