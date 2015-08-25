@@ -1,0 +1,693 @@
+//testing
+
+/* ANIMATION CSS START */
+
+.load-text{
+    color: white;
+    font-size: 5vw;
+    padding-top: 50%;
+    margin: 0 500px;
+    margin-left: 730px;
+}
+
+body { min-height: 100%; overflow: hidden; }
+
+.no-js #loading-screen,
+.no-js #pulsing-circle-container,
+.no-js #pulsing-circle { display: none;  }
+
+#loading-fallback { display: none; }
+
+.no-cssanimations #pulsing-circle { background-color: none; }
+.no-cssanimations #loading-fallback { display: block; }
+
+#loading-screen {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 4999;
+}
+
+#pulsing-circle-container {
+  display: block; 
+  text-align: center;
+  position: absolute; 
+  padding-top: 200px; 
+   
+  width: 100px;
+  height: 100%;
+}
+
+#pulsing-circle {
+    
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.7) }
+  100% {
+    -webkit-transform: scale(0.7);
+    opacity: 0;
+  }
+}
+
+ @keyframes scaleout {
+  0% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.7);
+  } 100% {
+    transform: scale(0.1);
+    -webkit-transform: scale(0.7);
+    opacity: 0;
+  } 
+
+
+}
+/* ANIMATION CSS ENT */
+
+
+
+/* LIGHTBOX CSS START */
+
+.lightbox-link {
+  background: #fff; 
+  border: none;  
+  border-left: 1px solid black;
+  z-index: 6000;
+}
+
+//LIGHTBOX BG
+#lightBoxDiv {        
+}
+#lightBoxDiv {  
+  position: fixed !important;
+  top: 0; 
+  left: 0; 
+  min-width: 100%; 
+  min-height: 100%; 
+  
+  -webkit-background-size: 2px 2px;
+      -moz-background-size: 3px 3px;
+      background-size: 3px 3px;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.3) .5px, transparent .5px, transparent 100%);
+      
+      background-image: -moz-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.9) 1px, transparent 1px, transparent 100%);
+      background-image: -ms-repeating-radial-gradient(center center, rgba(255,255,255,.9), rgba(255,255,255,.9) 1px, transparent 1px, transparent 100%);
+      background-image: repeating-radial-gradient(center center, rgba(255,255,255,.6), rgba(255,255,255,.6) .125px, transparent .125px, transparent 100%); 
+      //background-color: rgba(0,0,0, 0.8) !important;
+      position: fixed !important;  
+  text-align: center; 
+  display: none; 
+  z-index: 1500;
+  }
+
+
+
+
+
+#lightBoxContent{ 
+    background: rgba(0,0,0,0);
+    height: 100%; 
+    width: 100%;  
+    position: fixed; 
+    overflow: scroll;
+    margin: 0 0 ; 
+    display: none; 
+    z-index: 5525; 
+}
+
+#imageZone{
+  margin-top: 80px;
+  text-align: center;
+}
+
+.box-spacer{
+  height: 550px;
+}
+
+//AREA FOR IMAGES IN LIGHTBOX, NOT THE TEXT
+.ft-content{
+  margin-left: auto;
+  position: absolute;
+  display: block;
+  margin-right: auto;
+  width: 99%;
+  pointer-events: none;
+} 
+
+
+
+//LIGHTBOX FOOTER TEXT STYLES
+
+.footer-test {
+  color: #fff;
+  margin: 0px 20px;
+  display: block;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
+  font-size: 24px;
+  text-align: left !important;
+  font-style: bold;
+  font-variant: normal;
+  font-weight: 500;
+  
+}
+
+.lightbox-footer{
+  height: auto;
+  float: right;
+  width: 100%;
+  margin: 0 0;
+  bottom: 0;
+  background-color: #000;
+  color: #fff;
+  z-index: 2526;
+}
+
+
+#lightBoxText {
+  color: black;
+  text-align: center;
+}
+
+.body-fixed{
+  overflow: hidden !important;
+}
+
+#lightBoxClose { 
+    letter-spacing: 1px; 
+    margin: 0 0;
+    float: left; 
+    width: 20px;  
+    font-family: arial;  
+    background-color: #000; 
+    left: 20px; 
+    font-weight: 700; 
+}
+
+/* LIGHTBOX CSS END */
+
+
+
+
+/* cursor */
+
+a {
+   cursor: url(CURSOR/cursor-01.png), auto;
+   color: #D0D0D0 ;
+   text-decoration: none;
+   font-size: 1.4vw;
+}
+
+body {
+  cursor: url(CURSOR/cursor-03.png), auto;
+}
+
+.lb-cursor{
+  cursor: url(CURSOR/cursor-02.png), auto;
+}
+
+
+/* nav title and navbar */
+
+.navbar{
+    position: fixed;
+    height: 100px;
+    min-width: 110%;
+    background-color: #000;
+    margin: -10px 0 0 -8px;
+    
+}
+
+.site-title{
+  margin: 5px 15px;
+}
+
+#logo {
+  float: left;
+  font-size: 65px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header {
+   background-color: black;
+   height: 40px;
+   margin -20px 0 0 0;
+
+}
+
+.container {
+      min-width: 90%;
+      display: block;
+    }
+
+
+/* top gradient */
+
+.gradient-top{
+ background-image:
+    linear-gradient(
+      black, white
+    );
+    display: block;
+    min-width: 110%;
+    z-index: 3000;
+    margin: -10px 0;  
+}
+
+
+.invis{ 
+ color: transparent; 
+}
+
+
+
+/* IMAGE CLASSES */
+
+#image-box{
+    margin: 9% 25%;
+    margin-left: 350px;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    z-index: 2000 !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: scale(1); /* 1/10 of the original size */
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    
+}
+
+#image-box:hover{
+  transform: scale(1.1); /* 11/10 of the original size */
+    z-index: 1000 !important;
+}
+
+
+img { 
+}
+
+.hidden{
+  display: none;
+}
+
+.im-start{
+  background-image:url("content/oa/img/thumb/pepper_spray.png");
+  opacity: 0.0;
+}
+
+.im-oa{
+  background-image:url("content/oa/img/thumb/pepper_spray.png");
+}
+
+  background-image:url("content/mir/img/MIRETT_COVER.jpg");
+  opacity: 0.0;
+}
+
+
+.im-sh2{
+  background-image: url("content/sher/sh-1/img/COVER_SHERWOOD.jpg");
+}
+
+.im-fwd{
+  background-image: url("content/fwd/img/MIRETT_COVER.jpg");
+}
+
+.im-sum{
+  background-image:url("content/sum/img/SUMZINE_COVER-02.jpg");
+}
+
+.im-mir{
+  background-image: url("content/mir/img/MIRETT_COVER.jpg");
+}
+
+.im-sh1{
+  background-image: url("content/sher/sh-1/img/COVER_SHERWOOD.jpg");
+}
+
+.im-alt{
+  background-image: url("content/alt/img/MIRETT_COVER.jpg");
+}
+
+.im-oc{
+  background-image: url("content/ocb/img/OCBLOG_3.jpg");
+}
+
+.im-end{
+  background-image: url("content/ocb/img/OCBLOG_3.jpg");
+  opacity: 0.0;
+}
+
+//image classes end
+
+
+
+
+/* INDEX TITLES AND STICKY KIT START  */
+
+.blank-loose{
+    display: block;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+}
+
+ .index-box {
+    height: 500px;
+    padding-bottom: 0px;
+    position: relative !important;
+    margin: 0px 0;
+    overflow: hidden;
+    width: auto;
+     }
+
+     .index-title{
+  font-size: 300%;
+  text-align: right;
+  max-width: auto;
+  white-space: nowrap;
+  overflow-x:hidden
+  overflow: hidden;
+  z-index: 3000 !important;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.blank{
+  text-align:center;
+  width: auto;
+  height: 0;
+}
+
+div[style]{
+ pointer-events: none;
+}
+
+.pointer{
+  pointer-events: auto;
+}
+
+  .title {
+    position: absolute;
+    z-index: 3000 !important;
+}
+
+.title-loose{
+  position: absolute;
+  right: 0;
+  margin: 0px 20px !important;
+  z-index: 3000 !important;
+
+}
+
+.is-stuck{
+   
+}
+
+.stick-this{
+
+}
+
+/* INDEX TITLES AND STICKY KIT END */
+
+
+
+/* typography */
+
+@font-face {
+font-family: novecento;
+src: url("novecento.ttf") format('truetype');
+}
+
+i {
+  font-size: 80%;
+}
+b{
+  font-size: 115%;
+  color: #A0A0A0;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: novecento;
+  font-style: bold;
+
+}
+
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  
+  text-align: left;
+}
+
+h2 {
+  letter-spacing: -1px;
+  margin: 0 0;
+  text-align: left;
+  font-weight: bold;
+  color: #fff;
+}
+
+p {
+  font-size: 1.1em;
+  color: white;
+  line-height: 1.7em;
+  margin: 0 20px;
+}
+
+
+
+
+/* bottom gradient on main page */
+
+
+.gradient-bottom{
+  padding-top: 30px;
+  min-width: 100%;
+  z-index: 5000;
+  bottom: 0px;
+ background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0),  rgba(0, 0, 0, 1.0) 99%
+    );
+}
+  
+
+.invis { 
+ color: transparent; 
+ margin-bottom: -20px;
+}
+
+
+
+/* footer */
+
+ body {
+    margin-bottom: 0px
+    }
+
+footer {
+  margin: 0px -9px;
+  bottom: 0px;
+  min-width: 100%;
+  min-height: 100%
+  z-index: 5000;
+  height: auto;
+  position: relative;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0),  rgba(0, 0, 0, 1) 99%
+    );
+}
+
+.black-box{
+
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #000;
+}
+
+.ft-text{
+  font-size: 55px;
+  color: #fff;
+  margin: 0 15px;
+
+}
+
+footer a {
+  color: #fff;
+    font-size: 2.2em;
+    display: table;
+    
+}
+
+footer a:hover {
+  color: #777;
+}
+
+footer small {
+  float: left;
+}
+
+.footer-text{
+    float: left;
+    display: block;
+    width: 100%;
+    
+}
+
+body{
+  width: 100%;
+  right: 0;
+  margin: 0 0px;
+  overflow: auto;
+}
+
+.footer-button{
+  white-space: nowrap;
+  margin: 0px 20px;
+  display: block;
+  text-align: center
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.mobile-appendage{
+  display: none;
+  }
+/*HUGE SCREENS*/
+
+@media only screen and (min-width:1490px){
+        #logo{
+    font-size: 78px;
+    letter-spacing: 1px;
+    margin: 0 0;
+  }
+
+  #image-box{
+    margin: 15% 25%;
+    margin-left: 450px;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    z-index: 2000 !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: scale(1); /* 1/10 of the original size */
+    transition: all 0.5s ease-in-out;
+}
+
+  .index-title{
+    font-size: 48px;
+    margin: 0 0;
+    //margin-right: 250px;
+    z-index: 5500 !important;
+  }
+  .index-box{
+    position: absolute;
+  }
+
+  .load-text{
+    
+    margin-left: 865px;
+}
+
+  .ft-text{
+    font-size: 3.5vw;
+    padding-left: 10px;
+  }
+  footer{
+  height: 300px;
+  }
+  #lightBoxContent img{
+    max-width: 80%;
+  }
+  #image-zone{
+    
+  }
+    }
+
+
+
+/*MOBILE STYLES */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 680px) {
+  #logo{
+    font-size: 78px;
+  }
+
+  .mobile-appendage{
+  display: inherit;
+  }
+
+  #image-box{
+    width: 550px;
+    height: 550px;
+    margin: 380px 0 0 0px;
+    margin-top: 500px;
+    margin-left: 180px;
+  }
+
+  .index-title{
+    font-size: 62px;
+    white-space: normal;
+  }
+
+   .is-stuck{
+    color: yellow;
+  }
+
+   .ft-text{
+    font-size: 6.5vw;
+    padding-left: 10px;
+  }
+
+  .load-text{
+    font-size: 9.4vw;
+    margin-left: 475px;
+    margin-top: 400px;
+}
+
+   .footer-test{
+    font-size: 3.5vw;
+    padding-left: 10px;
+  }
+
+   a{
+   font-size: 3.5vw;
+   }
+
+  footer{
+  height: 300px;
+  }
+  #lightBoxContent img{
+    max-width: 80%;
+  }
+  #image-zone{
+
+  }
+}
