@@ -13,7 +13,7 @@
         var projects = { //this is where your lightbox image paths and text for the lightbox footer go
 
             "oa" : {
-                    "text": "</br>Historically, weapons are masculine in design, created by men for men,  and utilitarian to a fault in their form and function. Ornament and Armor has redesigned pre-existing tools in a way that will appeal to women, encouraging more women to own them. These pieces can be worn as everyday accessories, and provide quick and accessible means of protection. The collection includes 8 pieces in total, branching off of 3 different concept designs, including a pepper spray canister disguised as a necklace, a personal alarm discretely embedded in a ring and a keychain with a removable sharp defense tool that can be removed and operated in times of urgency. </br></br><b>Design Direction</b> | Nikki Mirsaeid & Hannah Jewett</br></br><b>Format</b> | Website, Collection</br></br><b>Collaborator</b> | Photography by Shoshana Fisher</br></br><b>Link</b> | <a href=\"http://www.ornamentandarmor.com\" target=blank>ornamentandarmor.com</a> </br></br>",
+                    "text": "</br>Historically, weapons are masculine in design, created by men for men,  and utilitarian to a fault in their form and function. Ornament and Armor has redesigned pre-existing tools in a way that will appeal to women, encouraging more women to own them. These pieces can be worn as everyday accessories, and provide quick and accessible means of protection. The collection includes 8 pieces in total, branching off of 3 different concept designs, including a pepper spray canister disguised as a necklace, a personal alarm discretely embedded in a ring and a keychain with a removable sharp defense tool that can be removed and operated in times of urgency. </br></br><b>Design Direction</b> | Nikki Mirsaeid & Hannah Jewett</br></br><b>Format</b> | Website, Collection</br></br><b>Collaborator</b> | Shoshana Fisher</br></br><b>Link</b> | <a href=\"http://www.ornamentandarmor.com\" target=blank>ornamentandarmor.com</a> </br></br>",
                 "images": [ "assets/stylesheets/content/oa/img/oa_1.png", "assets/stylesheets/content/oa/img/oa_2.png", "assets/stylesheets/content/oa/img/oa_3.png", "assets/stylesheets/content/oa/img/oa_4.png", "assets/stylesheets/content/oa/img/oa_5.png", "assets/stylesheets/content/oa/img/oa_6.png", "assets/stylesheets/content/oa/img/oa_7.png", "assets/stylesheets/content/oa/img/oa_8.png"] 
             },
 
@@ -145,7 +145,7 @@
         }  else
 
         $stickThis.stick_in_parent({
-             offset_top: 290 ,recalc_every: 5
+             offset_top: 340 ,recalc_every: 5
          })
          .on("sticky_kit:stick", function(e) {
              $(".title").removeClass("blank-loose");
@@ -173,12 +173,12 @@
                     //these are case statements, where if you scroll to point x, change the behavior
                     
                     //starting image is transparent, to help fade into the first project properly
-                    if (scroll < 250){
+                    if (scroll < 200){
                         $("#image-box").removeClass() 
                         $("#image-box").addClass("im-start") 
                         $('a').removeAttr('clickIt')
                     }
-                    if (scroll >= 250) {
+                    if (scroll >= 200) {
                         $("#image-box").removeClass()
 
                         $("#image-box").addClass("im-oa")
