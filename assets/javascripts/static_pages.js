@@ -173,10 +173,14 @@
                     //these are case statements, where if you scroll to point x, change the behavior
                     
                     //starting image is transparent, to help fade into the first project properly
-                    if (scroll < 200){
+                   /* if (scroll < 185){
+                        $("#image-box").removeClass()  
+                        $('a').removeAttr('clickIt')
+                    } */
+
+                    if (scroll >= 100){
                         $("#image-box").removeClass() 
                         $("#image-box").addClass("im-start") 
-                        $('a').removeAttr('clickIt')
                     }
                     if (scroll >= 200) {
                         $("#image-box").removeClass()
