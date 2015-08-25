@@ -178,7 +178,7 @@
                         $('a').removeAttr('clickIt')
                     } */
 
-                    if (scroll >= 100){
+                    if (scroll >= 150){
                         $("#image-box").removeClass() 
                         $("#image-box").addClass("im-start") 
                     }
