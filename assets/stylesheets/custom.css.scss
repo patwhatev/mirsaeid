@@ -111,6 +111,7 @@ h2.load-text {
     width: 100%;  
     position: fixed; 
     overflow: scroll;
+
     margin: 0 0 ; 
     display: none; 
     z-index: 5525; 
@@ -141,7 +142,7 @@ h2.load-text {
 
 .footer-test {
   color: #fff;
-  margin: 0px 20px;
+  margin: 0px 0px;
   display: block;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
   font-size: 24px;
@@ -155,7 +156,7 @@ h2.load-text {
 .lightbox-footer{
   height: auto;
   float: right;
-  width: 100%;
+  min-width: 100%;
   margin: 0 0;
   bottom: 0;
   background-color: #000;
@@ -175,7 +176,7 @@ h2.load-text {
 
 #lightBoxClose { 
     letter-spacing: 1px; 
-    margin: 20px 20px;
+    margin: 20px 0px;
     float: left; 
     width: 20px;  
     font-family: arial;  
