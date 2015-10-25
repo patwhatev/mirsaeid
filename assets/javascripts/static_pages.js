@@ -10,6 +10,7 @@
         var $lightBoxClose = $('#lightBoxClose');
         var $stickThis = $('.stick-this');
         var $viewport = $(window).width();
+        $("#image-box").addClass("im-oa");
         var projects = { //this is where your lightbox image paths and text for the lightbox footer go
 
             "oa" : {
@@ -30,7 +31,7 @@
                     "images": [ "assets/stylesheets/content/sher/sh-1/img/1_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/2_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/3_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/5_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/6_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/8_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/9_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/10_SHERWOOD.jpg", "assets/stylesheets/content/sher/sh-1/img/11_SHERWOOD.jpg"] 
             },
             "ocblog" : {
-                    "text": "</br>Contributor to the Opening Ceremony Blog. Works include:</br></br></br>'So Trendy! Neon and Mirrors for Selfies'<i> Art Basel, Winter 2014</i> </br></br></br>'Walking the Line Between High & Low, Culture and Commerce.'<i> Interview with Cyril Duval, Fall 2014</i> </br></br></br>'Boy child at Art Basel Miami'<i> Winter 2013</i></br></br></br><b>Link</b>| <a href=\"http://www.openingceremony.us\" target=blank>Openingceremony.us</a></br></br>",
+                    "text": "</br>Contributor to the Opening Ceremony Blog. Works include:</br></br></br>'So Trendy! Neon and Mirrors for Selfies'<i> Art Basel, Winter 2014</i> </br></br></br>'Walking the Line Between High & Low, Culture and Commerce.'<i> Interview with Cyril Duval, Fall 2014</i> </br></br></br>'Boy child at Art Basel Miami'<i> Winter 2013</i></br></br></br><b>Link</b>| <a href=\"http://www.openingceremony.us\" target=blank>openingceremony.us</a></br></br>",
                     "images": [ "assets/stylesheets/content/ocb/img/OCBLOG_1.jpg", "assets/stylesheets/content/ocb/img/OCBLOG_2.jpg", "assets/stylesheets/content/ocb/img/OCBLOG_3.jpg"] 
             }
         };
@@ -42,7 +43,7 @@
 
             var imageHtml = '';
             project.images.forEach(function(img) {
-                imageHtml += '<img src="' + img + '" />'
+                imageHtml += '<img src="' + img + '" /></br>'
                 console.log(img);
                 // put the image wherever
             });
@@ -69,7 +70,6 @@
          function closeLightBox() {
              $lightBox.fadeOut();
              $lightBoxContent.hide();
-
          }
         
          $clickIt.click(function(e) {
@@ -176,13 +176,14 @@
                    /* if (scroll < 185){
                         $("#image-box").removeClass()  
                         $('a').removeAttr('clickIt')
-                    } */
+                    } 
 
                     if (scroll >= 150){
                         $("#image-box").removeClass() 
                         $("#image-box").addClass("im-start") 
                     }
-                    if (scroll >= 200) {
+                    */
+                    if (scroll >= 0) {
                         $("#image-box").removeClass()
 
                         $("#image-box").addClass("im-oa")

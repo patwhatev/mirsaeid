@@ -1,14 +1,4 @@
-//testing
-
 /* ANIMATION CSS START */
-
-.load-text{
-    color: white;
-    font-size: 5vw;
-    padding-top: 50%;
-    margin: 0 500px;
-    margin-left: 730px;
-}
 
 body { min-height: 100%; overflow: hidden; }
 
@@ -33,12 +23,16 @@ body { min-height: 100%; overflow: hidden; }
   z-index: 4999;
 }
 
+h2.load-text {
+  font-size: 55px;
+}
+
 #pulsing-circle-container {
   display: block; 
   text-align: center;
   position: absolute; 
-  padding-top: 200px; 
-   
+  margin-top: 25%; 
+  margin-left: 40%;
   width: 100px;
   height: 100%;
 }
@@ -181,7 +175,7 @@ body { min-height: 100%; overflow: hidden; }
 
 #lightBoxClose { 
     letter-spacing: 1px; 
-    margin: 0 0;
+    margin: 20px 20px;
     float: left; 
     width: 20px;  
     font-family: arial;  
@@ -199,9 +193,9 @@ body { min-height: 100%; overflow: hidden; }
 
 a {
    cursor: url(CURSOR/cursor-01.png), auto;
-   color: #D0D0D0 ;
+   color: white ;
    text-decoration: none;
-   font-size: 1.4vw;
+   font-size: 1.0vw;
 }
 
 body {
@@ -289,7 +283,7 @@ header {
 
 #image-box:hover{
   transform: scale(1.1); /* 11/10 of the original size */
-    z-index: 1000 !important;
+  z-index: 1000 !important;
 }
 
 
@@ -577,6 +571,7 @@ body{
 .mobile-appendage{
   display: none;
   }
+
 /*HUGE SCREENS*/
 
 @media only screen and (min-width:1490px){
@@ -587,11 +582,21 @@ body{
   }
 
   #image-box{
-    margin: 15% 25%;
-    margin-left: 450px;
+   
+    }
+
+  #pulsing-circle-container {
+  margin-top: 25%; 
+  margin-left: 25%;
+  }
+
+  #image-box{
+    margin: 15% 55%;
+    margin-left: 800px;
     position: fixed;
-    width: 500px;
-    height: 500px;
+    width: 30vw;
+    height: 30vw;
+    background-size: 30vw;
     z-index: 2000 !important;
     background-repeat: no-repeat;
     background-position: center center;
