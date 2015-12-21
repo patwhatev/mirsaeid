@@ -40,7 +40,6 @@
         //PROJECT RENDERER, DO NOT ALTER
         function render(project) { // a key
             $('.footer-test').html(project.text) //put the response on the dom
-
             var imageHtml = '';
             project.images.forEach(function(img) {
                 imageHtml += '<img src="' + img + '" /></br>'
@@ -50,6 +49,7 @@
             $('#imageZone').html(imageHtml); //put the response on the dom
 
         }
+
 
         //to swap out an image source, use
         function swapSrc(img, src) {
@@ -164,7 +164,7 @@
          
          //scrolltop change image on HOMEPAGE
 
-        var curentProject;
+        var curentProject = 'oa';
          var lastScrollTop = 0;
          $(window).scroll(function(event) {    
             var scroll = $(window).scrollTop();
@@ -183,9 +183,11 @@
                         $("#image-box").addClass("im-start") 
                     }
                     */
+
+                    curentProject = 'oa';
+
                     if (scroll >= 0) {
                         $("#image-box").removeClass()
-
                         $("#image-box").addClass("im-oa")
                         curentProject = 'oa';
                     } 
